@@ -1,0 +1,15 @@
+Gerador de Relatórios Financeiros
+
+Um sistema Python para análise e geração de relatórios financeiros com gráficos e exportação para Excel/PDF.
+
+Funcionalidades
+- Análise mensal de receitas e despesas
+- Visualização gráfica dos dados
+- Exportação para Excel e PDF
+- Dashboard interativo
+
+Requisitos
+- Python 3.x
+- Pandas
+- Matplotlib
+- FPDF
