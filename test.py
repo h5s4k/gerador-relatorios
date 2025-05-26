@@ -9,12 +9,12 @@ from fpdf import FPDF
 
 class GeradorRelatoriosFinanceiros:
     def __init__(self):
-        """Inicializa a classe com dados vazios"""
+        #Inicializa a classe com dados vazios
         self.dados = pd.DataFrame(columns=['Data', 'Categoria', 'Valor', 'Tipo'])
         self.carregar_dados()  # Chama o método de carregamento de dados
         
     def carregar_dados(self):
-        """Oferece opções para carregar dados: exemplo ou do usuário"""
+        #Oferece opções para carregar dados: exemplo ou do usuário
         print("\nOPÇÕES DE CARREGAMENTO DE DADOS:")
         print("1. Usar dados de exemplo (gerados automaticamente)")
         print("2. Inserir meus próprios dados")
@@ -53,7 +53,7 @@ class GeradorRelatoriosFinanceiros:
         print("\nDados de exemplo carregados com sucesso!")
     
     def inserir_dados_manualmente(self):
-        """Permite ao usuário inserir seus próprios dados"""
+        #Permite ao usuário inserir seus próprios dados
         print("\nINSERÇÃO DE DADOS FINANCEIROS")
         print("Formato esperado: Data (DD/MM/AAAA), Categoria, Valor, Tipo (Receita/Despesa)")
         print("Digite 'sair' para terminar a entrada de dados\n")
@@ -106,7 +106,7 @@ class GeradorRelatoriosFinanceiros:
             print("Nenhum dado válido inserido. Continuando com DataFrame vazio.")
     
     def resumo_mensal(self):
-        """Gera um resumo financeiro mensal"""
+        #Gera um resumo financeiro mensal
         if self.dados.empty:
             print("Nenhum dado disponível para análise.")
             return None
@@ -120,7 +120,7 @@ class GeradorRelatoriosFinanceiros:
             return None
     
     def relatorio_por_categoria(self):
-        """Gera um relatório por categoria"""
+        #Gera um relatório por categoria
         if self.dados.empty:
             print("Nenhum dado disponível para análise.")
             return None
@@ -132,7 +132,7 @@ class GeradorRelatoriosFinanceiros:
             return None
     
     def plot_evolucao_mensal(self):
-        """Cria um gráfico de evolução mensal"""
+        #Cria um gráfico de evolução mensal
         if self.dados.empty:
             print("Nenhum dado disponível para plotar.")
             return None
@@ -165,7 +165,7 @@ class GeradorRelatoriosFinanceiros:
         return plt
 
     def plot_distribuicao_categorias(self):
-        """Cria um gráfico de pizza com distribuição por categoria"""
+        #Cria um gráfico de pizza com distribuição por categoria
         if self.dados.empty:
             print("Nenhum dado disponível para plotar.")
             return None
