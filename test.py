@@ -36,7 +36,7 @@ class GeradorRelatoriosFinanceiros:
                 print("Opção inválida. Tente novamente.")
     
     def carregar_dados_exemplo(self):
-        """Gera dados de exemplo para demonstração"""
+        #Gera dados de exemplo para demonstração
         np.random.seed(42)
         dates = pd.date_range(end=datetime.today(), periods=90).tolist()
         categorias = ['Vendas', 'Despesas Operacionais', 'Custos de Produção', 'Investimentos', 'Outros']
@@ -188,7 +188,7 @@ class GeradorRelatoriosFinanceiros:
         return plt
     
     def exportar_para_excel(self, caminho='relatorio_financeiro.xlsx'):
-        """Exporta os relatórios para um arquivo Excel"""
+        #Exporta os relatórios para um arquivo Excel
         if self.dados.empty:
             print("Nenhum dado disponível para exportar.")
             return
@@ -208,7 +208,7 @@ class GeradorRelatoriosFinanceiros:
             print(f"Erro ao exportar para Excel: {e}")
     
     def exportar_para_pdf(self, caminho='relatorio_financeiro.pdf'):
-        #Exporta os relatórios para PDF com gráficos"""
+        #Exporta os relatórios para PDF com gráficos
         if self.dados.empty:
             print("Nenhum dado disponível para exportar.")
             return
@@ -280,7 +280,7 @@ class GeradorRelatoriosFinanceiros:
             plt.close('all')  # Fecha todas as figuras abertas
     
     def mostrar_dashboard(self):
-        """Mostra um dashboard simples no console"""
+        #Mostra um dashboard simples no console
         if self.dados.empty:
             print("\nNenhum dado disponível para mostrar dashboard.")
             return
